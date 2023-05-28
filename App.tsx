@@ -1,10 +1,19 @@
 import { useEffect, useState } from 'react';
-import { Platform, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
+import {
+  Dimensions,
+  PixelRatio,
+  Platform,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  View,
+} from 'react-native';
 import SkillBtnGrid, { Button } from './components/SkillBtnGrid';
-import ClearAndDeleteBtns from './components/ClearAndDeleteBtns';
 import SkillPresentor, { Skill } from './components/SkillPresentor';
 
 export default function App() {
+  const screenCirc = (Dimensions.get('window').height * Dimensions.get('window').width) / 10000;
   const [totalDD, setTotalDD] = useState(0.0);
   const [index, setIndex] = useState(1);
   const [presentors, setPresentors] = useState<Skill[]>([
@@ -73,7 +82,6 @@ export default function App() {
       )
     );
   };
-
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -83,13 +91,23 @@ export default function App() {
           presentors={presentors}
         />
       </View>
-      <View>
-        <SkillBtnGrid
-          onDelete={deleteSkill}
-          onClear={clearSkills}
-          onClick={(button) => addSkill(button)}
-        />
-      </View>
+      {screenCirc < 31 ? (
+        <ScrollView>
+          <SkillBtnGrid
+            onDelete={deleteSkill}
+            onClear={clearSkills}
+            onClick={(button) => addSkill(button)}
+          />
+        </ScrollView>
+      ) : (
+        <View>
+          <SkillBtnGrid
+            onDelete={deleteSkill}
+            onClear={clearSkills}
+            onClick={(button) => addSkill(button)}
+          />
+        </View>
+      )}
     </SafeAreaView>
   );
 }
