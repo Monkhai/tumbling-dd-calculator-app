@@ -10,7 +10,7 @@ const ClearAndDeleteBtns = ({ onClear, onDelete }: Props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onDelete}>
-        <Feather name="delete" size={respDeleteBtnSize()} color={'rgb(239, 207, 78)'} />
+        <Feather name="delete" size={60} color={'rgb(239, 207, 78)'} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.border} onPress={onClear}>
         <View style={styles.textContainer}>
@@ -19,30 +19,6 @@ const ClearAndDeleteBtns = ({ onClear, onDelete }: Props) => {
       </TouchableOpacity>
     </View>
   );
-};
-
-const respFontSize = () => {
-  if (Dimensions.get('window').scale <= 2.0) {
-    return 24;
-  } else {
-    return 30;
-  }
-};
-
-const respDeleteBtnSize = () => {
-  if (Dimensions.get('window').scale <= 2) {
-    return 48;
-  } else {
-    return 64;
-  }
-};
-
-const respClearBtnSize = () => {
-  if (Dimensions.get('window').scale <= 2) {
-    return 38;
-  } else {
-    return 48;
-  }
 };
 
 const styles = StyleSheet.create({
@@ -57,7 +33,7 @@ const styles = StyleSheet.create({
     borderWidth: 5,
     borderRadius: 9.5,
     width: 80,
-    height: respClearBtnSize(),
+    height: 48,
   },
   textContainer: {
     flex: 1,
@@ -66,7 +42,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'rgb(239, 207, 78)',
-    fontSize: respFontSize(),
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
     textAlignVertical: 'center',

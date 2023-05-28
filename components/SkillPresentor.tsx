@@ -36,14 +36,6 @@ const SkillPresentor = ({ presentors, totalDD, handleBonus }: Props) => {
   );
 };
 
-const respFontSize = () => {
-  if (Dimensions.get('window').height <= 800) {
-    return 24;
-  } else {
-    return 28;
-  }
-};
-
 const styles = StyleSheet.create({
   meteContainer: {
     backgroundColor: '#323b40',
@@ -58,7 +50,7 @@ const styles = StyleSheet.create({
   skillText: {
     flex: 1,
     padding: 1,
-    fontSize: respFontSize(),
+    fontSize: 30,
     textAlign: 'center',
     textAlignVertical: 'center',
     color: 'rgb(239, 207, 78)',

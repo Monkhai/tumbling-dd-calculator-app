@@ -42,14 +42,6 @@ const BonusButton = ({ handleBonus, skillIndex }: Props) => {
   );
 };
 
-const respFontSize = () => {
-  if (Dimensions.get('window').height <= 800) {
-    return 24;
-  } else {
-    return 30;
-  }
-};
-
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
@@ -67,7 +59,7 @@ const styles = StyleSheet.create({
   },
   dropdownButtonText: {
     color: 'rgb(239, 207, 78)',
-    fontSize: respFontSize(),
+    fontSize: 30,
   },
   dropdownContainer: {
     backgroundColor: '#323b40',

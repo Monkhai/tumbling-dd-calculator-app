@@ -76,7 +76,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.grid}>
+      <View>
         <SkillPresentor
           handleBonus={(bonus, skillIndex) => handleBonus(bonus, skillIndex)}
           totalDD={totalDD}
@@ -100,8 +100,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#323b40',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-  },
-  grid: {
-    marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 });

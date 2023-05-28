@@ -58,22 +58,6 @@ const SkillBtnGrid = ({ onClick }: Props) => {
   );
 };
 
-const respBtnDimensions = () => {
-  if (Dimensions.get('window').scale <= 2) {
-    return 45;
-  } else {
-    return 55;
-  }
-};
-
-const respFontSize = () => {
-  if (Dimensions.get('window').scale <= 2) {
-    return 15;
-  } else {
-    return 17;
-  }
-};
-
 const styles = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
@@ -86,13 +70,13 @@ const styles = StyleSheet.create({
     borderColor: 'rgb(239, 207, 78)',
     borderRadius: 50,
     margin: 3,
-    width: respBtnDimensions(),
-    height: respBtnDimensions(),
+    width: 50,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
-    fontSize: respFontSize(),
+    fontSize: 16,
     color: '#efcf4e',
   },
 });
