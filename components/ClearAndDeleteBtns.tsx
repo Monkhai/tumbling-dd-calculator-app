@@ -1,6 +1,11 @@
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
 interface Props {
   onClear: () => void;
   onDelete: () => void;
@@ -10,7 +15,7 @@ const ClearAndDeleteBtns = ({ onClear, onDelete }: Props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onDelete}>
-        <Feather name="delete" size={60} color={'rgb(239, 207, 78)'} />
+        <Feather name="delete" size={hp('5%')} color={'rgb(239, 207, 78)'} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.border} onPress={onClear}>
         <View style={styles.textContainer}>
@@ -32,8 +37,8 @@ const styles = StyleSheet.create({
     borderColor: 'rgb(239, 207, 78)',
     borderWidth: 5,
     borderRadius: 9.5,
-    width: 80,
-    height: 48,
+    width: wp('13%'),
+    height: hp('4%'),
   },
   textContainer: {
     flex: 1,
@@ -42,7 +47,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'rgb(239, 207, 78)',
-    fontSize: 25,
+    fontSize: hp('2%'),
     fontWeight: 'bold',
     textAlign: 'center',
     textAlignVertical: 'center',

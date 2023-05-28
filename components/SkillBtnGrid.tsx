@@ -1,4 +1,9 @@
-import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export interface Button {
   skill: string;
@@ -7,9 +12,11 @@ export interface Button {
 
 interface Props {
   onClick: (button: Button) => void;
+  onClear: () => void;
+  onDelete: () => void;
 }
 
-const SkillBtnGrid = ({ onClick }: Props) => {
+const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
   const buttons: Button[] = [
     { skill: '(', value: 0.1 },
     { skill: 'f', value: 0.1 },
@@ -53,13 +60,23 @@ const SkillBtnGrid = ({ onClick }: Props) => {
 
   return (
     <>
-      <View style={styles.buttons}>{buttons.map(renderBtn)}</View>
+      <View style={styles.buttons}>
+        {buttons.map(renderBtn)}
+
+        <TouchableOpacity style={styles.button} onPress={onDelete}>
+          <Feather name="delete" size={hp('3.5%')} color={'rgb(239, 207, 78)'} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={onClear}>
+          <Text style={styles.clearButtonText}>AC</Text>
+        </TouchableOpacity>
+      </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
   buttons: {
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
@@ -70,13 +87,18 @@ const styles = StyleSheet.create({
     borderColor: 'rgb(239, 207, 78)',
     borderRadius: 50,
     margin: 3,
-    width: 50,
-    height: 50,
+    width: wp('13%'),
+    height: wp('13%'),
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: hp('2%'),
+    color: '#efcf4e',
+  },
+  clearButtonText: {
+    fontSize: hp('2%'),
+    fontWeight: 'bold',
     color: '#efcf4e',
   },
 });

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Dimensions, Platform, StatusBar, SafeAreaView, StyleSheet, View } from 'react-native';
+import { Platform, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import SkillBtnGrid, { Button } from './components/SkillBtnGrid';
 import ClearAndDeleteBtns from './components/ClearAndDeleteBtns';
 import SkillPresentor, { Skill } from './components/SkillPresentor';
@@ -84,10 +84,11 @@ export default function App() {
         />
       </View>
       <View>
-        <SkillBtnGrid onClick={(button) => addSkill(button)} />
-      </View>
-      <View>
-        <ClearAndDeleteBtns onDelete={deleteSkill} onClear={clearSkills} />
+        <SkillBtnGrid
+          onDelete={deleteSkill}
+          onClear={clearSkills}
+          onClick={(button) => addSkill(button)}
+        />
       </View>
     </SafeAreaView>
   );
@@ -96,9 +97,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
     backgroundColor: '#323b40',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    padding: Platform.OS === 'android' ? StatusBar.currentHeight + 5 : 0,
   },
 });

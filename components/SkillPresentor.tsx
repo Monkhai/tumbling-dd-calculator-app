@@ -1,6 +1,9 @@
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
-import ResponsiveFontSize from 'react-native-responsive-fontsize';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 import BonusButton from './BonusButton';
 
 export interface Skill {
@@ -39,10 +42,10 @@ const SkillPresentor = ({ presentors, totalDD, handleBonus }: Props) => {
 const styles = StyleSheet.create({
   meteContainer: {
     backgroundColor: '#323b40',
+    marginBottom: hp('1%'),
     borderWidth: 1,
     borderColor: 'rgb(239, 207, 78)',
-    alignItems: 'center',
-    marginBottom: 20,
+    width: wp('85'),
   },
   container: {
     flexDirection: 'row',
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
   skillText: {
     flex: 1,
     padding: 1,
-    fontSize: 30,
+    fontSize: hp('3.5%'),
     textAlign: 'center',
     textAlignVertical: 'center',
     color: 'rgb(239, 207, 78)',
@@ -59,14 +62,13 @@ const styles = StyleSheet.create({
     borderColor: 'rgb(239, 207, 78)',
   },
   totalDD: {
-    fontSize: 30,
+    fontSize: hp('3.5%'),
     textAlign: 'center',
     textAlignVertical: 'center',
     color: 'rgb(239, 207, 78)',
     backgroundColor: '#323b40',
     borderWidth: 1,
     borderColor: 'rgb(239, 207, 78)',
-    width: 350,
   },
 });
 

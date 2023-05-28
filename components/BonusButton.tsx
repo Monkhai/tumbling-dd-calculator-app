@@ -1,6 +1,10 @@
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
 import React, { useRef } from 'react';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 const bonuses: number[] = [
   0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8,
@@ -36,7 +40,8 @@ const BonusButton = ({ handleBonus, skillIndex }: Props) => {
         buttonTextStyle={styles.dropdownButtonText}
         dropdownStyle={styles.dropdownContainer}
         dropdownOverlayColor="transparent"
-        rowTextStyle={styles.dropdownRow}
+        rowTextStyle={styles.dropdownTxtRow}
+        rowStyle={styles.rowStyle}
       />
     </View>
   );
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
   },
   dropdownButton: {
     flex: 1,
-    width: 90,
+    width: wp('20'),
     backgroundColor: '#323b40',
     borderWidth: 1,
     borderColor: 'rgb(239, 207, 78)',
@@ -59,14 +64,18 @@ const styles = StyleSheet.create({
   },
   dropdownButtonText: {
     color: 'rgb(239, 207, 78)',
-    fontSize: 30,
+    fontSize: hp('3%'),
   },
   dropdownContainer: {
     backgroundColor: '#323b40',
     borderWidth: 1,
     borderColor: 'rgb(239, 207, 78)',
   },
-  dropdownRow: {
+  dropdownTxtRow: {
+    color: 'rgb(239, 207, 78)',
+  },
+  rowStyle: {
+    height: hp('4%'),
     color: 'rgb(239, 207, 78)',
   },
 });
