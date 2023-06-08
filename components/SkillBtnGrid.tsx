@@ -50,6 +50,7 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
     { skill: '2--.0', value: 6.3 },
     { skill: '2--.<', value: 6.9 },
   ];
+
   const renderBtn = (button: Button) => {
     return (
       <TouchableOpacity style={styles.button} onPress={() => onClick(button)} key={button.skill}>

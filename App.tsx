@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {
   Dimensions,
-  PixelRatio,
   Platform,
   SafeAreaView,
   ScrollView,
