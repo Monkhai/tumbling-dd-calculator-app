@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.grey,
-    borderWidth: 5,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     padding: Platform.OS === 'android' ? StatusBar.currentHeight + 5 : 0,
