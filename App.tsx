@@ -80,7 +80,7 @@ export default function App() {
   //RETURN//
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ borderWidth: 1 }}>
+      <View>
         <SkillPresentor
           resetDropdown={resetDropdown}
           handleBonus={(bonus, skillIndex) => handleBonus(bonus, skillIndex)}
@@ -88,7 +88,7 @@ export default function App() {
           presentors={presentors}
         />
       </View>
-      <View style={{ borderWidth: 1 }}>
+      <View>
         <SkillBtnGrid
           onDelete={deleteSkill}
           onClear={clearSkills}
