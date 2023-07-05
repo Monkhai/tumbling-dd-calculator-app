@@ -5,6 +5,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import colors from '../services/colors';
 
 interface Props {
   onClear: () => void;
@@ -15,7 +16,7 @@ const ClearAndDeleteBtns = ({ onClear, onDelete }: Props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onDelete}>
-        <Feather name="delete" size={hp('5%')} color={'rgb(239, 207, 78)'} />
+        <Feather name="delete" size={hp('5%')} color={colors.gold} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.border} onPress={onClear}>
         <View style={styles.textContainer}>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     gap: 150,
   },
   border: {
-    borderColor: 'rgb(239, 207, 78)',
+    borderColor: colors.gold,
     borderWidth: 5,
     borderRadius: 9.5,
     width: wp('13%'),
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: 'rgb(239, 207, 78)',
+    color: colors.gold,
     fontSize: hp('2%'),
     fontWeight: 'bold',
     textAlign: 'center',

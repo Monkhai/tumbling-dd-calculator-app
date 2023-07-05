@@ -1,19 +1,18 @@
 {
+  "displayName": "DD Calc",
   "expo": {
-    "name": "tumbling-dd-calculator-app",
-    "slug": "tumbling-dd-calculator-app",
-    "version": "1.0.0",
+    "name": "DD Calc",
+    "slug": "TumblingDifficultyCalculator",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#323b40"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yohaiwiener.tumblingddcalculatorapp"
@@ -21,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#323b40"
       },
       "package": "com.yohaiwiener.tumblingddcalculatorapp"
     },
@@ -30,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "28ce6649-1007-4720-9069-c8fdf10cd18f"
+        "projectId": "efe02618-9a6c-4109-86c9-a40c67d98c41"
       }
     }
   }

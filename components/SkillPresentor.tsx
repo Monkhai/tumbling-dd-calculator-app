@@ -1,9 +1,11 @@
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import {
-  widthPercentageToDP as wp,
   heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import { Row, Rows, Table } from 'react-native-table-component';
+import colors from '../services/colors';
 import BonusButton from './BonusButton';
 
 export interface Skill {
@@ -17,58 +19,60 @@ interface Props {
   presentors: Skill[];
   totalDD: number;
   handleBonus: (bonus: number, skillIndex: number) => void;
+  resetDropdown: boolean;
 }
 
-const SkillPresentor = ({ presentors, totalDD, handleBonus }: Props) => {
-  const renderPresentors = (skill: Skill) => {
-    return (
-      <View key={skill.skillIndex} style={styles.container}>
-        <Text style={styles.skillText}>{skill.skillIndex} </Text>
-        <Text style={styles.skillText}>{skill.name} </Text>
-        <Text style={styles.skillText}>{skill.value.toFixed(1)} </Text>
-        <BonusButton skillIndex={skill.skillIndex} handleBonus={handleBonus} />
-      </View>
-    );
-  };
+const SkillPresentor = ({ presentors, totalDD, handleBonus, resetDropdown }: Props) => {
+  const headers = ['No.', 'Skill', 'DD', 'Bonus'];
+
+  const rowData = presentors.map((skill) => {
+    return [
+      <Text style={styles.skillText}>{skill.skillIndex}</Text>,
+      <Text style={styles.skillText}>{skill.name}</Text>,
+      <Text style={styles.skillText}>{skill.value.toFixed(1)}</Text>,
+      <BonusButton
+        resetDropdown={resetDropdown}
+        skillIndex={skill.skillIndex}
+        handleBonus={handleBonus}
+      />,
+    ];
+  });
+
+  const totalDdData = [[<Text style={styles.skillText}>{totalDD.toFixed(1)}</Text>]];
 
   return (
     <View style={styles.meteContainer}>
-      {presentors.map(renderPresentors)}
-      <Text style={styles.totalDD}>{totalDD.toFixed(1)}</Text>
+      <Table borderStyle={{ borderColor: colors.gold, borderWidth: 2 }}>
+        <Row data={headers} textStyle={styles.skillText} />
+        <Rows data={rowData} />
+        <Rows data={totalDdData} />
+      </Table>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   meteContainer: {
-    backgroundColor: '#323b40',
+    backgroundColor: colors.grey,
     marginBottom: hp('1%'),
-    borderWidth: 1,
-    borderColor: 'rgb(239, 207, 78)',
     width: wp('85'),
   },
   container: {
     flexDirection: 'row',
   },
   skillText: {
-    flex: 1,
     padding: 1,
-    fontSize: hp('3.5%'),
+    fontSize: hp('3%'),
     textAlign: 'center',
-    textAlignVertical: 'center',
-    color: 'rgb(239, 207, 78)',
-    backgroundColor: '#323b40',
-    borderWidth: 1,
-    borderColor: 'rgb(239, 207, 78)',
+    color: colors.gold,
+    backgroundColor: colors.grey,
   },
   totalDD: {
-    fontSize: hp('3.5%'),
+    fontSize: hp('3%'),
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: 'rgb(239, 207, 78)',
-    backgroundColor: '#323b40',
-    borderWidth: 1,
-    borderColor: 'rgb(239, 207, 78)',
+    color: colors.gold,
+    borderColor: colors.gold,
   },
 });
 

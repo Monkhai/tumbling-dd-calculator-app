@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import colors from '../services/colors';
 
 export interface Button {
   skill: string;
@@ -65,7 +66,7 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
         {buttons.map(renderBtn)}
 
         <TouchableOpacity style={styles.button} onPress={onDelete}>
-          <Feather name="delete" size={hp('3.5%')} color={'rgb(239, 207, 78)'} />
+          <Feather name="delete" size={hp('3.5%')} color={colors.gold} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={onClear}>
           <Text style={styles.clearButtonText}>AC</Text>
@@ -77,15 +78,15 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
 
 const styles = StyleSheet.create({
   buttons: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: '#323b40',
+    backgroundColor: colors.grey,
     borderWidth: 2,
-    borderColor: 'rgb(239, 207, 78)',
+    borderColor: colors.gold,
     borderRadius: 50,
     margin: 3,
     width: wp('13%'),
