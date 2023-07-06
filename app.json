@@ -3,7 +3,7 @@
   "expo": {
     "name": "DD Calc",
     "slug": "TumblingDifficultyCalculator",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
