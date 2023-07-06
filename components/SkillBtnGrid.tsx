@@ -54,7 +54,12 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
 
   const renderBtn = (button: Button) => {
     return (
-      <TouchableOpacity style={styles.button} onPress={() => onClick(button)} key={button.skill}>
+      <TouchableOpacity
+        accessibilityLabel={button.skill}
+        style={styles.button}
+        onPress={() => onClick(button)}
+        key={button.skill}
+      >
         <Text style={styles.buttonText}>{button.skill}</Text>
       </TouchableOpacity>
     );
