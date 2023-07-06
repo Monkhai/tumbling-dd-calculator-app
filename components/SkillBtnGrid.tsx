@@ -61,18 +61,16 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
   };
 
   return (
-    <>
-      <View style={styles.buttons}>
-        {buttons.map(renderBtn)}
+    <View style={styles.buttons}>
+      {buttons.map(renderBtn)}
 
-        <TouchableOpacity style={styles.button} onPress={onDelete}>
-          <Feather name="delete" size={hp('3.5%')} color={colors.gold} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={onClear}>
-          <Text style={styles.clearButtonText}>AC</Text>
-        </TouchableOpacity>
-      </View>
-    </>
+      <TouchableOpacity style={styles.button} onPress={onDelete}>
+        <Feather name="delete" size={hp('3.5%')} color={colors.gold} />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={onClear}>
+        <Text style={styles.clearButtonText}>AC</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

@@ -101,10 +101,11 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flex: 1,
     backgroundColor: colors.grey,
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    padding: Platform.OS === 'android' ? StatusBar.currentHeight + 5 : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
 });

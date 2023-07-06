@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pc-api-7720674180752937284-579",
+  "private_key_id": "d11b64ce2f7bb9a472240d80d6986d76d018c0ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmQ2pQuLWz2ADB\n/EN7ciJYwmtceyI98C9fYUU45AlFo2PdeONx7+JFWpbbZuIsHEGSjoMxOZJwtuvv\n+cgasxx0wdfMZz6J6yY9N3lPh3eRFCnaS/Viuwx9AkjVwtDmCx6ci3fDExYzLsRR\nAtVJHcyVbtBVPuIpiHslxCtIYKbSAP+aAf+BkN819uVORBLp5Tqekhc13pOM6C8D\nqlifod5PWFgMDnlMtwKHrCbjbI/vR0gnaD5Y/CxISdjvAY9JZDpvIbo+a5yD6teC\nW6uwWb7UHnFYcbxiUDUehG8I32N4v6XPL05by+pasoxdHslCHMxnTQyFG1J9mIKz\nhyo+E7CNAgMBAAECggEAGyPiFO8x6fuWlBPjyCDnbmm+MMiA3G96rC0qqZC/2rhD\nMwHqzsyDuSKCgaoXvW+XXJ8a10w4lWGmvfOeMI2QVZbW7SzlToouIcwOZ2cLo4kR\nE+tWURmLflSDIzG7+/FQu+kgUZ2qAAzgSwEVY+wTW0lNhLzRGkqHH7EYB6aPVLRF\nlUjazPwjqL9pyHBOCBj0vOw4EJKC1EPB0gdqxcjyjx3cGi7aMlTNNL+5MX/O1bNn\nugHYuv4GyURiPutbZbrDVxhA1kgl6awmcWzhHAO8fDffn10AJhTpUGkCoRTs+usn\nFI1uxcFXOrWC+9C7l2GCvDGUqttU2GIJB8+GycVAAQKBgQDYtopfuHNpSF0hq90D\nqMiiBZ62MiEIJC/JtX+HZcQQxXYDOJt+yc7iZH/3Nt0Pw0/3tCnVrjxxfdLPxXmg\n6tPkhtPkeHgBTKYc/4qIXIGumrb+DD1KptWSH6QoYeEOs1JvcDaE1rXeu/FneVRx\nw1Sqtbz8vUWLf6s5RPftU9ZYjQKBgQDEZ4x9I6SBJ2OfXElT4Ad4V9bIg/1nQbNq\nkzLi578RpBnd8THhc9rhKkgKsoTeLewtPV1CscQjVS5x2PH64e8eldoc1OhzTjEO\nOi68+5ItOmaLfCUkFBbdQbpYsW/+6kZyQArYqbIjpPVdtwxzJ786G+YXnnwMTJYy\nXgjh2vi4AQKBgCoXYk7vK3Nie7xDfjzstnNJtibbG7FSHfoGh4uLx4YeZCqB/ymk\nFsvAC16/yDX8kHajBpEbM2AzuRNj3pjTo246hcNVZrGR6p2tQIH1vbZlFG/JfsoW\nF1s3TBIP2L+bMsK0P9KTRWXKiTu4xB8IelRh0iAgvvY2SNJpw+HTq8ktAoGAZ69a\nxX2ZjO1kdG7d7z+n8eo9Y2H61xYiR7Mp/AvoHMILPdXlRWZKOPB/U9Zmunx34HIy\n19DNAPIpMMUdChtYh0cI/IuRo721vBMPNYmB5AqetCh32xIX9/qJC+WwgFzhj9Mr\nZrI/bv3Y4v6NvgVPuLedwv5R8pRD/pcSDVnyUAECgYBzQWcAUROCwnJigXJF2/BG\nKK9YyryyU882BhoGoN79Hq7KAkzyYWc+sHauTwhhmmHVsV3hcPGTSnQ65/dZMu7V\nl5+f/PSarJjoO3d35H75LlCc5ddp9guon7+1S/mwLjHL9bECwYe2jXanuGT0LYsP\n0ONBW9zO7Vur60g+56It9Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tumbling-difficulty-calculator@pc-api-7720674180752937284-579.iam.gserviceaccount.com",
+  "client_id": "115152216669391708256",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tumbling-difficulty-calculator%40pc-api-7720674180752937284-579.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
