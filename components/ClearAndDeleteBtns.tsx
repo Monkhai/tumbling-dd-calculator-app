@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
-import React from 'react';
 import { Feather } from '@expo/vector-icons';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import {
-  widthPercentageToDP as wp,
   heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import colors from '../services/colors';
 

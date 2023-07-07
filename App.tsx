@@ -11,26 +11,26 @@ export default function App() {
 
   //presentors state!
   const [presentors, setPresentors] = useState<Skill[]>([
-    { skillIndex: 1, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 2, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 3, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 4, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 5, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 6, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 7, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 8, value: 0.0, name: '--', bonus: 0.0 },
+    { skillIndex: 1, value: 0.0, name: '--', bonus: 0.0, zIndex: 8 },
+    { skillIndex: 2, value: 0.0, name: '--', bonus: 0.0, zIndex: 7 },
+    { skillIndex: 3, value: 0.0, name: '--', bonus: 0.0, zIndex: 6 },
+    { skillIndex: 4, value: 0.0, name: '--', bonus: 0.0, zIndex: 5 },
+    { skillIndex: 5, value: 0.0, name: '--', bonus: 0.0, zIndex: 4 },
+    { skillIndex: 6, value: 0.0, name: '--', bonus: 0.0, zIndex: 3 },
+    { skillIndex: 7, value: 0.0, name: '--', bonus: 0.0, zIndex: 2 },
+    { skillIndex: 8, value: 0.0, name: '--', bonus: 0.0, zIndex: 1 },
   ]);
   const OGPresentors = [
-    { skillIndex: 1, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 2, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 3, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 4, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 5, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 6, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 7, value: 0.0, name: '--', bonus: 0.0 },
-    { skillIndex: 8, value: 0.0, name: '--', bonus: 0.0 },
+    { skillIndex: 1, value: 0.0, name: '--', bonus: 0.0, zIndex: 8 },
+    { skillIndex: 2, value: 0.0, name: '--', bonus: 0.0, zIndex: 7 },
+    { skillIndex: 3, value: 0.0, name: '--', bonus: 0.0, zIndex: 6 },
+    { skillIndex: 4, value: 0.0, name: '--', bonus: 0.0, zIndex: 5 },
+    { skillIndex: 5, value: 0.0, name: '--', bonus: 0.0, zIndex: 4 },
+    { skillIndex: 6, value: 0.0, name: '--', bonus: 0.0, zIndex: 3 },
+    { skillIndex: 7, value: 0.0, name: '--', bonus: 0.0, zIndex: 2 },
+    { skillIndex: 8, value: 0.0, name: '--', bonus: 0.0, zIndex: 1 },
   ];
-  //calculate Total DD!
+  //calculate Total DD
   useEffect(() => {
     // Calculate the sum of values in the presentors array
     const totalValue = presentors.reduce((total, presentor) => total + presentor.value, 0);
@@ -106,6 +106,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.grey,
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight - 10 : 0,
   },
 });

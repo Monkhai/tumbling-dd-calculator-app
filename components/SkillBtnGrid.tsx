@@ -81,7 +81,6 @@ const SkillBtnGrid = ({ onClick, onClear, onDelete }: Props) => {
 
 const styles = StyleSheet.create({
   buttons: {
-    // flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',

@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {
   heightPercentageToDP as hp,
@@ -13,6 +13,7 @@ export interface Skill {
   value: number;
   name: string;
   bonus: number;
+  zIndex: number;
 }
 
 interface Props {
@@ -44,7 +45,7 @@ const SkillPresentor = ({ presentors, totalDD, handleBonus, resetDropdown }: Pro
     <View style={styles.meteContainer}>
       <Table borderStyle={{ borderColor: colors.gold, borderWidth: 2 }}>
         <Row data={headers} textStyle={styles.skillText} />
-        <Rows data={rowData} />
+        <Rows style={{ overflow: 'visible' }} data={rowData} />
         <Rows data={totalDdData} />
       </Table>
     </View>

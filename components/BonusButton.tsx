@@ -1,11 +1,8 @@
-import { View, StyleSheet, Animated, Text } from 'react-native';
-import SelectDropdown from 'react-native-select-dropdown';
 import { Feather } from '@expo/vector-icons';
-import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import React, { useEffect, useRef, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import SelectDropdown from 'react-native-select-dropdown';
 import colors from '../services/colors';
 
 const bonuses: number[] = [
@@ -29,7 +26,7 @@ const BonusButton = ({ handleBonus, skillIndex, resetDropdown }: Props) => {
   }, [resetDropdown]);
 
   return (
-    <View>
+    <View style={styles.container}>
       <SelectDropdown
         ref={dropdownRef}
         data={bonuses}
@@ -53,7 +50,7 @@ const BonusButton = ({ handleBonus, skillIndex, resetDropdown }: Props) => {
         buttonStyle={styles.dropdownButton}
         buttonTextStyle={styles.dropdownButtonText}
         dropdownStyle={styles.dropdownContainer}
-        dropdownOverlayColor={'false'}
+        dropdownOverlayColor="tranparent"
         rowTextStyle={styles.dropdownTxtRow}
         rowStyle={styles.rowStyle}
       />
@@ -62,13 +59,16 @@ const BonusButton = ({ handleBonus, skillIndex, resetDropdown }: Props) => {
 };
 
 const styles = StyleSheet.create({
-  dropdownButton: {
-    width: wp('20'),
-    backgroundColor: colors.grey,
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: colors.gold,
+  container: {
     height: 'auto',
+    flex: 1,
+  },
+  dropdownButton: {
+    padding: 0,
+    width: '100%',
+    backgroundColor: colors.grey,
+    color: colors.gold,
+    height: '100%',
   },
   dropdownButtonText: {
     color: colors.gold,
@@ -77,10 +77,14 @@ const styles = StyleSheet.create({
   dropdownContainer: {
     backgroundColor: colors.grey,
     borderWidth: 2,
+    borderTopWidth: 2,
     borderColor: colors.gold,
+    position: 'absolute',
+    top: -100,
   },
   dropdownTxtRow: {
     color: colors.gold,
+    shadowColor: colors.grey,
   },
   rowStyle: {
     height: hp('4%'),
