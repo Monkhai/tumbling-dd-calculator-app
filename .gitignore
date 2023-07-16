@@ -1,6 +1,7 @@
 node_modules/
 .expo/
 dist/
+pc-api-7720674180752937284-579-d11b64ce2f7b.json
 npm-debug.*
 *.jks
 *.p8

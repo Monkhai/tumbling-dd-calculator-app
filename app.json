@@ -3,7 +3,7 @@
   "expo": {
     "name": "DD Calc",
     "slug": "TumblingDifficultyCalculator",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,6 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#323b40"
       },
+      "versionCode": 3,
       "package": "com.yohaiwiener.tumblingddcalculatorapp"
     },
     "web": {
